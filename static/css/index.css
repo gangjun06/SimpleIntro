@@ -71,3 +71,17 @@
     background-position-x: -1000px;
   }
 }
+
+.title-deco {
+  position: relative;
+}
+
+.title-deco::after {
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 4px;
+  background: #EE7785;
+  left: 0;
+  bottom: 0px;
+}
