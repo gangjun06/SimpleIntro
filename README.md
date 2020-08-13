@@ -6,7 +6,7 @@ simple theme for hugo
 # Live Demo
 https://gangjun06.github.io/hugo-theme-simple-intro-demo
 
-[Demo Source Code](exampleSite)
+[Demo Source Code](https://github.com/gangjun06/hugo-theme-simple-intro-demo)
 
 # Get Started
 
