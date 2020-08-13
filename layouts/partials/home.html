@@ -30,7 +30,7 @@
         {{ partial "home_title" (dict "title" "About Me") }}
         <div class="flex mt-3 gap-3 text-xl">
           {{ range $data.about.link }}
-          <i class="{{ .icon }}"></i>{{end}}
+          <a href="{{.url}}"><i class="{{ .icon }}"></i></a>{{end}}
         </div>
       </div>
       <div class="mt-4 md:mt-0 md:ml-4">
