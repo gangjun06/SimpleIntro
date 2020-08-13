@@ -12,24 +12,86 @@
     </div>
   </div>
   {{ $data := .Site.Data.home }}
-  <main class="container mx-auto mt-8">
-    <section id="about" class="flex justify-around">
+  <main class="container mx-auto mt-8 px-4 xl:px-0">
+    <section id="about" class="md:flex justify-around">
       <div class="my-auto">
-        {{ partial "home_title" (dict "title" "Skills") }}
+        {{ partial "home_title" (dict "title" "About Me") }}
         <div class="flex mt-3 gap-3 text-xl">
-          {{ range $data.about.links.link }}
+          {{ range $data.about.link }}
           <i class="{{ .icon }}"></i>{{end}}
         </div>
       </div>
-      <div class="text-md">
+      <div class="text-md mt-4 md:mt-0">
         <div>{{ replace $data.about.text "\n" "<br />" | safeHTML }}</div>
       </div>
     </section>
-    <section id="skills" class="mt-4">
-      <div class="flex justify-center">
+    <section id="skills" class="mt-6">
+      <div class="md:flex justify-center">
         {{ partial "home_title" (dict "title" "Skills") }}
       </div>
+      <div
+        class="mt-4 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        {{ range $data.skills.list }}
+        <div class="w-full rounded overflow-hidden shadow-lg">
+          <div class="">
+            <div class="font-bold text-xl mb-2 py-2 px-6 bg-gray-500">
+              <div class="flex">
+                <img
+                  src="{{ .icon }}"
+                  width="50px"
+                  class="bg-gray-300 py-1 px-1 rounded-full"
+                />
+                <div class="my-auto ml-2">
+                  {{ .name }}
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 text-base px-6 pb-4">
+              {{ replace .text "\n" "<br />" | safeHTML }}
+            </p>
+          </div>
+        </div>
+        {{end}}
+      </div>
     </section>
-    <section id="projects"></section>
+    <section id="projects" class="mt-6">
+      <div class="md:flex justify-center">
+        {{ partial "home_title" (dict "title" "Projects") }}
+      </div>
+      <div
+        class="mt-4 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        {{ range $data.project.list }}
+        <div class="w-full rounded overflow-hidden shadow-lg">
+          <img
+            class="w-full h-48"
+            src="{{ .image }}"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">{{ .title }}</div>
+            <p class="text-gray-700 text-base">
+              {{ .text }}
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+              >#photography</span
+            >
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+              >#travel</span
+            >
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+              >#winter</span
+            >
+          </div>
+        </div>
+        {{end}}
+      </div>
+    </section>
   </main>
 </div>
