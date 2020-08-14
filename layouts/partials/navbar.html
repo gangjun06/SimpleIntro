@@ -1,6 +1,6 @@
-<nav>
+<nav class="pl-4 md:pl-24">
   <a href="/" class="logo">{{ .Site.Title }}</a>
-  <ul>
+  <ul class="hidden md:flex">
     {{ range .Site.Menus.main }}
     <li>
       <a href="{{ .URL }}">{{ .Name }}</a>
