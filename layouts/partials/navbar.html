@@ -1,5 +1,5 @@
 <nav class="pl-4 md:pl-24">
-  <a href="/" class="logo">{{ .Site.Title }}</a>
+  <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
   <ul class="hidden md:flex">
     {{ range .Site.Menus.main }}
     <li>
