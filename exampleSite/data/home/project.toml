@@ -1,0 +1,16 @@
+[[list]]
+    title = "lorem"
+    image = "https://picsum.photos/400/200"
+    text = """
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Voluptatibus quia, nulla! Maiores et perferendis eaque,
+        exercitationem praesentium nihil.
+    """
+[[list]]
+    title = "lorem"
+    image = "https://picsum.photos/400/200"
+    text = """
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Voluptatibus quia, nulla! Maiores et perferendis eaque,
+        exercitationem praesentium nihil.
+    """

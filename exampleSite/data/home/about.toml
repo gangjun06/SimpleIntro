@@ -1,0 +1,23 @@
+title = "Hello, World!"
+
+text = """
+Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+Voluptatibus quia, nulla! Maiores et perferendis eaque,
+exercitationem praesentium nihil.
+"""
+
+[[link]]
+    icon = "fab fa-github"
+    url = "#"
+[[link]]
+    icon = "fab fa-linkedin"
+    url = "#"
+[[link]]
+    icon = "fas fa-envelope"
+    url = "#"
+[[link]]
+    icon = "fab fa-instagram"
+    url = "#"
+[[link]]
+    icon = "fab fa-facebook"
+    url = "#"

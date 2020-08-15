@@ -2,11 +2,11 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "SimpleIntro"
-license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
+license = "Apache-2.0"
+licenselink = "https://github.com/gangjun06/SimpleIntro/blob/master/LICENSE"
+description = "Simple Single-Page Theme For Hugo"
+homepage = "https://github.com/gangjun06/SimpleIntro"
+tags = ["clean", "simple", "responsive", "light", "single-page", ""]
 features = []
 min_version = "0.41.0"
 
