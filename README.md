@@ -79,3 +79,10 @@ data/home/skills.toml
         skill text
     """
 ```
+
+# Credits
+
+| Name                      | License            |
+|---------------------------|--------------------|
+| github.com/gohugoio/hugo  | Apache License 2.0 |
+| github.com/konpa/devicon/ | MIT License        |
