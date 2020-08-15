@@ -21,6 +21,7 @@ Check out the config files included on the [exampleSite](exampleSite)
 
 # Credits
 
-| Name                      | License     | Description    |
-|---------------------------|-------------|----------------|
-| github.com/konpa/devicon/ | MIT License | Demo Site Icon |
+| Name                                | License     | Description    |
+|-------------------------------------|-------------|----------------|
+| github.com/konpa/devicon/           | MIT License | Demo Site Icon |
+| github.com/tailwindlabs/tailwindcss | MIT License | Css Library |
