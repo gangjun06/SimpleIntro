@@ -1,7 +1,7 @@
 # Simple Intro
 simple theme for hugo
 
-![intro](imgaes/img1.png)
+![intro](https://raw.githubusercontent.com/gangjun06/SimpleIntro/master/imgaes/screenshot.png)
 
 # Live Demo
 https://gangjun06.github.io/SimpleIntroDemo
@@ -24,4 +24,4 @@ Check out the config files included on the [exampleSite](exampleSite)
 | Name                                | License     | Description    |
 |-------------------------------------|-------------|----------------|
 | github.com/konpa/devicon/           | MIT License | Demo Site Icon |
-| github.com/tailwindlabs/tailwindcss | MIT License | Css Library |
+| github.com/tailwindlabs/tailwindcss | MIT License | Css Library    |
