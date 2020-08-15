@@ -1,5 +1,8 @@
 <div>
-  <div id="mainBG" style="background-image: url('{{ $.Site.Params.mainbg }}');">
+  <div
+    id="mainBG"
+    style="background-image: url('{{ if $.Site.Params.mainbg }}{{ $.Site.Params.mainbg }}{{ else }}https://picsum.photos/1920/1080{{ end }}');"
+  >
     <div
       class="wave wave1"
       style="background-image: url('{{ .Site.BaseURL }}/img/wave.png');"
@@ -18,9 +21,9 @@
     ></div>
     <div class="centerAll">
       <div class="title text-6xl font-bold text-center">
-        {{ $.Site.Params.maintitle }}
+        {{if  $.Site.Params.maintitle }}{{ $.Site.Params.maintitle }}{{else}}Hello, World{{end}}
       </div>
-      <div class="text text-xl text-center">{{ $.Site.Params.maintext }}</div>
+      <div class="text text-xl text-center">{{if $.Site.Params.maintext}}{{ $.Site.Params.maintext }}{{else}}Edit config.toml/params{{end}}</div>
     </div>
   </div>
   {{ $data := .Site.Data.home }}
@@ -34,9 +37,16 @@
         </div>
       </div>
       <div class="mt-4 md:mt-0 md:ml-4">
-        <div class="text-2xl font-bold">{{$data.about.title}}</div>
+        <div class="text-2xl font-bold">
+          {{ if $data.about.title }}{{$data.about.title}}{{else}}You can put
+          text in data/home/about.toml/title{{end}}
+        </div>
         <div class="text-lg mt-3">
-          <div>{{ replace $data.about.text "\n" "<br />" | safeHTML }}</div>
+          <div>
+            {{ if $data.about.text}}{{ replace $data.about.text "\n" "<br />" | safeHTML }}
+            {{else}}You can put text in
+            data/home/about.toml/text{{end}}
+          </div>
         </div>
       </div>
     </section>
@@ -44,10 +54,12 @@
       <div class="md:flex justify-center">
         {{ partial "home_title" (dict "title" "Skills") }}
       </div>
-      <div
-        class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-      >
+      
+      {{if $data.skills.list}}
         {{ range $data.skills.list }}
+        <div
+         class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
         <div class="w-full rounded overflow-hidden shadow-lg">
           <div class="">
             <div class="font-bold text-xl mb-2 py-2 px-6 bg-gray-500">
@@ -67,13 +79,18 @@
             </p>
           </div>
         </div>
-        {{end}}
       </div>
+        {{end}}
+        {{else}}
+          <div class="mt-4 text-xl text-center">Skills don't exist</div>
+        {{end}}
     </section>
     <section id="projects" class="mt-12">
       <div class="md:flex justify-center">
         {{ partial "home_title" (dict "title" "Projects") }}
       </div>
+      
+      {{if $data.skills.list}}
       <div
         class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
       >
@@ -93,6 +110,9 @@
         </div>
         {{end}}
       </div>
+      {{else}}
+          <div class="mt-4 text-xl text-center">Projects does not exist</div>
+      {{end}}
     </section>
   </main>
 </div>
