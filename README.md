@@ -1,7 +1,7 @@
 # Simple Intro
 simple theme for hugo
 
-![intro](https://raw.githubusercontent.com/gangjun06/SimpleIntro/master/imgaes/screenshot.png)
+![intro](https://raw.githubusercontent.com/gangjun06/SimpleIntro/master/images/screenshot.png)
 
 # Live Demo
 https://gangjun06.github.io/SimpleIntroDemo
