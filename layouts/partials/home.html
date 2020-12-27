@@ -96,11 +96,13 @@
       >
         {{ range $data.project.list }}
         <div class="w-full rounded overflow-hidden shadow-lg">
-          <img
+          <a href="{{ .url }}" target="_blank">
+            <img
             class="w-full h-48"
             src="{{ .image }}"
             alt="Sunset in the mountains"
-          />
+            />            
+          </a>         
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">{{ .title }}</div>
             <p class="text-gray-700 text-base">
