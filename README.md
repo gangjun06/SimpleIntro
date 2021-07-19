@@ -13,7 +13,7 @@ https://gangjun06.github.io/SimpleIntroDemo
 ```bash
 hugo new site <site-name>
 cd <site-name>
-git submodule add https://github.com/gangjun06/SimpleIntro themes/SimpleIntro
+git submodule add https://github.com/gangjun06/SimpleIntro
 ```
 
 # Configuration
