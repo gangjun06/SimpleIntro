@@ -1,3 +1,5 @@
+Sorry for not managing properly. I hope this repo helped you create a hugo theme
+
 # Simple Intro
 
 simple theme for hugo
