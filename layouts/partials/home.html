@@ -90,7 +90,7 @@
         {{ partial "home_title" (dict "title" "Projects") }}
       </div>
       
-      {{if $data.skills.list}}
+      {{if $data.project.list}}
       <div
         class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
       >
@@ -98,9 +98,10 @@
         <div class="w-full rounded overflow-hidden shadow-lg">
           <a href="{{ .url }}" target="_blank">
             <img
-            class="w-full h-48"
+            class="h-48"
             src="{{ .image }}"
-            alt="Sunset in the mountains"
+			alt="Sunset in the mountains"
+			style="object-fit:cover;"
             />            
           </a>         
           <div class="px-6 py-4">
